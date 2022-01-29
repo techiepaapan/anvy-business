@@ -1,0 +1,377 @@
+@charset "utf-8";
+/* CSS Document */
+div
+{
+	//border:solid;
+}
+.about-half-1 p {
+    margin-top: 7px;
+}
+.item {
+  /*! border:  solid 1px rgb(37, 105, 98); */
+}
+.about-half-2, .about-half-1 {
+    margin-top: 10px;
+}
+.about-half-1 p {
+    margin-top: 30px;
+}
+.icons {
+   
+    height: 210px;
+}
+.products {
+    background-color: #fff;
+}
+.baner-info {
+    
+    top: 30%;
+}
+img
+{
+	height:auto !important;
+}
+.footer-address ul li i {
+    margin-right: 7px;
+}
+.footer-address ul li {
+    font-size: 14px;
+}
+.who-we-are p ,.vieews p{
+    font-size: 16px;
+    color: rgb(110, 107, 107);
+    text-align: center;
+}
+.sub-who .sub-icon {
+    display: block;
+    margin: auto;
+    width: 80px;
+}
+.sub-who >div:hover {
+    -webkit-box-shadow: 0 0 20px rgba(144, 126, 125, 0.17);
+    box-shadow: 0 0 20px rgba(144, 126, 125, 0.17);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.sub-who >div {
+   background-color: rgb(255, 255, 255);
+padding: 30px 20px 30px;
+-webkit-transition: 0.3s;
+transition: 0.3s;
+margin-bottom:50px;
+border: 1px dotted rgb(232, 232, 232);
+}
+.about-vision
+{
+	background-image:url("../images/banner3.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	position:relative;
+}
+.about-vision::after
+{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color: rgba(1, 13, 18, 0.76);
+}
+.about-vision .container
+{
+	position:relative;
+	z-index:11;
+}
+.focus h2 {
+    margin-bottom: 30px;
+}
+.supporting > div {
+    border: solid 1px rgb(230, 228, 228);
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 6px 2px rgb(231, 231, 231);
+    background-color: rgb(248, 248, 248);
+}
+.focus .media-left i {
+    font-size: 32px;
+    color: rgb(46, 186, 239);
+}
+.focus  h4
+{
+	font-size:20px;
+}
+.focus h4 {
+    font-size: 17px;
+    text-align: left;
+    line-height: 2;
+}
+
+.focus .media {
+    background-color: rgb(242, 242, 242);
+    padding: 20px;
+    border: solid 1px rgb(227, 228, 228);
+    transition: 1s;
+	margin-bottom:10px;
+	
+}
+.certificates_inner {
+    color: rgb(171, 25, 31);
+    width: 325px;
+    border: solid 1px rgb(233, 233, 233);
+    font-size: 18px;
+    padding: 20px 15px;
+    text-align: center;
+    background-color: rgb(251, 251, 251);
+	display:inline-block;
+}
+.certificates_inner img {
+    width: 100%;
+    margin: 20px auto 0;
+}
+.focus  .media-body {
+    vertical-align: middle;
+}
+.sub-who
+{
+	overflow:hidden;
+}
+.focus
+{
+	padding-bottom:0;
+}
+
+.about-vision h2,.about-vision p
+{
+	color:#fff;
+}
+.sub-who h3 {
+    margin: 20px auto 15px;
+    font-size: 20px;
+}
+.sub-who p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.vieews {
+    background-color: rgb(245, 245, 245);
+    padding: 40px 0 30px;
+    text-align: center;
+}
+.about-content-sub .sub-who1 > div {
+    background-color: transparent;
+    min-height: 194px;
+    padding: 20px 15px;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	margin-bottom:20px;
+}
+.about-vision h2 {
+    margin-top: 20px;
+}
+@media(max-width:1199px)
+	{
+	.about-half-1 p {
+    margin-top: 20px;
+}
+.footer-follow1
+{
+	width: 45%;
+}
+.footer-address
+{
+	width:30%;
+}
+	}
+@media(max-width:991px)
+{
+	.about-half-2
+	{
+		float: left;
+		width: 50%;
+		margin-left: 25%;
+		margin-top:20px;
+	}
+	.about-half-1
+	{
+		float: none;
+		width: 100%;
+	}
+	.about-us ,.service,.news{
+    padding: 45px 0;
+}
+.products {
+    padding: 0;
+}
+	
+	.icons-fifth
+	{
+	height:auto;
+	float:none;
+	margin:auto;
+	}
+	.footer-follow
+{
+	width:100%;
+}
+.footer-address
+{
+	width:50%;
+}
+.footer-copyright {
+    font-size: 14px;
+}
+}
+@media(max-width:767px)
+{
+	.about-half-2 
+	{
+		float: none;
+		width: 450px;
+		margin:20px auto 20px;
+	}
+	.about-content-sub .sub-who1 > div 
+	{
+		min-height:auto;
+	}
+	.sub-title 
+	{
+		font-size: 27px;
+	}
+	.about-us ,.service,.news
+	{
+		padding: 35px 0;
+	}
+	.baner-info h3 {
+    text-align: center;
+    font-size: 3.1em;
+	}
+	.footer-copyright {
+    font-size: 13px;
+}
+}
+@media(max-width:680px)
+{
+	.icons 
+	{
+		width: 100%;
+		margin-bottom:0;
+	}
+}
+@media(max-width:650px)
+{
+	#demo-1 {
+    min-height: 425px;
+}
+	
+	
+}
+@media(max-width:580px)
+{
+	.footer-follow,.footer-address,.footer-about,.footer-links
+	{
+	width:100%;
+	height:auto;
+	}
+	.footer-sub {
+    min-height: auto;
+    margin-bottom: 45px;
+}
+}
+@media(max-width:575px)
+{
+	#demo-1 {
+    min-height: 375px;
+}
+.baner-info h3 {
+    text-align: center;
+    font-size: 35px;
+}
+.baner-info {
+    top: 36%;
+    padding-left: 15px;
+padding-right: 15px;
+}
+}
+@media(max-width:480px)
+{
+	.about-half-2 
+	{	
+		width: 100%;	
+	}
+}
+@media(max-width:435px)
+{
+	#demo-1 {
+    min-height: 350px;
+}
+.baner-info {
+    top: 31%;
+}
+.who-we-are p, .vieews p {
+    font-size: 15px;
+}	
+}
+@media(max-width:420px)
+{
+
+.sub-title {
+    font-size: 25px;
+}
+ .sub-head p {
+    text-align: justify;
+}
+.main-footer h4 {
+    font-size: 18px;  
+    margin-bottom: 11px;
+}
+.main-footer {
+	font-size:13px;
+}
+.footer-address ul li {
+    font-size: 13px;
+    margin-bottom: 11px;
+}
+.footer-links ul li {
+    color: rgb(221, 221, 221);
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+}
+
+@media(max-width:320px)
+{
+
+.sub-title {
+    font-size: 24px;
+}
+.icon-box p {
+    color: rgb(220, 225, 228);
+    text-align: justify;
+}
+}
+@media(max-width:300px)
+{
+	#demo-1 {
+    min-height: 325px;
+}
+.baner-info {
+    top: 26%;
+}
+.footer-sub {
+    min-height: auto;
+    margin-bottom: 34px;
+}
+}
+@media(max-width:250px)
+{
+	.baner-info h3 {
+    text-align: center;
+    font-size: 30px;
+}
+#demo-1 {
+    min-height: 314px;
+}
+}

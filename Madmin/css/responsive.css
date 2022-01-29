@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 1366px)
+{
+.about, .services, .contact, .subscribe, .portfolio-agileinfo, .codes, .typography, .team-section, .aboutpage {
+    padding: 4em 0;
+}
+}
+
+@media screen and (max-width: 1440px)
+{
+.aboutpageleft h3 {
+    font-size: 23px;
+}
+
+}

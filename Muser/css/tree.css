@@ -1,0 +1,255 @@
+.info-section .container,.tree-diagram .container
+{
+	background-color: transparent;
+	border-top: none;
+}
+.info-active-user>div
+{
+	
+	border-top: solid 4px #17a689;
+	background-color: #fff;
+	box-shadow: 0 4px 4px rgba(95, 86, 86, 0.4);
+	padding: 15px;
+	position: relative;
+}
+.info-active-user1>div
+{
+	
+	border-top: solid 4px #F1C40F;
+	background-color: #fff;
+	box-shadow: 0 4px 4px rgba(95, 86, 86, 0.4);
+	padding:15px;
+	text-align:center;
+}
+.info-active-user1 h4{
+	color:#F1C40F;
+}
+.info-active-user2>div
+{
+	
+	border-top: solid 4px #2ECC71;
+	background-color: #fff;
+	box-shadow: 0 4px 4px rgba(95, 86, 86, 0.4);
+	padding:15px;
+	text-align:center;
+}
+.info-active-user2 h4{
+	color:#2ECC71;
+}
+.info-section {
+    margin-bottom: 30px;
+    padding: 0;
+}
+.lr-members {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+}
+.left-member {
+    background-color: #34495E;
+    color: #fff;
+    position: relative;
+    height: 50%;
+    padding: 7px 15px;
+    text-align: center;
+}
+.right-member {
+    background-color: #E74C3C;
+    color: #fff;
+    position: relative;
+    height: 50%;
+    padding: 7px 15px;
+    text-align: center;
+}
+.left-member h6,.right-member h6  {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+}
+.left-member p,.right-member p {
+    margin: 0;
+}
+.info-section  h3 {
+    margin: 15px 0;
+    font-weight: bold;
+}
+.info-section h4 {
+    margin: 15px auto 0;
+}
+.info-active-user h4 {
+    color: #17a689;
+}
+.tree-diagram .container>div{
+	
+	background-color: #fff;
+border-top: solid 5px #8CDDCD;
+}
+.tree-table
+{
+	table-layout: fixed;   
+	width:100% ;
+	vertical-align:top; 
+	text-align:center
+}
+.horizontal-line
+{
+	position:relative; 
+	background-color: #58595B;
+	width: 50%; 
+	left:25%;  
+	height: 3px;	
+}
+.vertical-line
+ {
+    position: relative;
+    width: 3px;
+    height: 30px;
+    left: 50%;
+    background-color: #E74C3C;
+}
+.tree-line-level-1 td,.tree-level-2 td,.tree-level-3 td
+{
+	width:50%;
+}
+.tree-data
+{
+	display:block;
+	word-wrap: break-word;
+	width: 99%;
+}
+.tree-data-name
+{
+	background-color:#E74C3C; 
+	color:white;
+	padding:5px 10px; 
+	text-decoration:none;
+	display: inline-block;
+	margin: 0 auto 0px;
+	min-width: 100px;
+	word-break: break-all;
+	border: double;
+}
+.container>div::after
+{
+	content:'';
+	clear:both;
+	display:table;
+}
+.tree-data-name:hover,.tree-data-name:active,.tree-data-name:focus
+{
+	text-decoration:none;
+	color:#fff;
+}
+.tree-diagram-start {
+    padding: 30px 15px;
+    margin: 10px auto 50px;
+}
+.add-new-reg {
+    background-color: #F1C40F;
+}
+.tooltip_templates 
+{ 
+	display: none; 
+}
+.tooltip-table
+{
+	margin-bottom:0;
+}
+.tooltip-table .colored-head
+{
+	background-color:#4F4847;
+}
+/*RESPONSIVE CODE*/
+@media(max-width:991px)
+{
+	.lr-members 
+	{
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		top: auto;
+		height: 57px;
+	}
+	.left-member ,.right-member
+	{
+		height: 57px;
+		padding: 7px 5px;
+		width: 50%;
+		float: left;
+	}
+	.info-active-user > div ,.info-active-user1 > div ,.info-active-user2 > div 
+	{
+		
+	    height: 150px;
+	}
+	.info-section h4 
+	{
+		margin: 27px auto 0;
+	}
+	.info-section .info-active-user h4 
+	{
+		margin: 5px auto 0;
+		text-align:center;
+	}
+	.info-section h3 
+	{
+		margin: 8px 0;
+	    text-align:center;
+	}
+	.tree-diagram-start 
+	{
+		padding: 20px 15px;
+	}
+}
+@media(max-width:767px)
+{
+	.info-active-user,.info-active-user1,.info-active-user2
+	{
+		max-width: 400px;
+		float: none;
+		//margin: 0 auto 20px;
+	}
+	.info-section 
+	{
+		margin-bottom: 10px;
+	}
+	.tree-data-name 
+	{
+		min-width: auto;
+	}
+}
+@media(max-width:600px)
+{
+	.tree-diagram-start 
+	{
+		padding: 5px;
+	}
+}
+@media(max-width:575px)
+{
+	.tree-diagram-start img 
+	{
+		width: 50px;
+		height: auto;
+	}
+	.tree-diagram-start .top-nav-tree img 
+	{
+		width: 25px;
+		height: auto;
+	}
+	.add-nw-img
+	{
+		margin-top: -16px;
+	}
+}
+@media(max-width:425px)
+{
+	.tree-data-name 
+	{
+		min-width: auto;
+		font-size: 12px;
+	}
+}
+}

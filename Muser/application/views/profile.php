@@ -1,0 +1,243 @@
+<?php 
+include 'sessioncheck.php';
+
+$id=$_SESSION['uid1'];
+$src="";
+$query = $this->db->query("select image from user_extradetails where u_id='$id'");
+foreach ($query->result() as $row)
+{
+	$src=$row->image;
+}
+
+if($src==""){
+	$src="no_image.jpg";
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0  user-scalable=1">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/alertify.core.css" />
+	<link rel="stylesheet" href="<?php echo base_url();?>css/alertify.default.css" />
+	<link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>css/responsive.css" />
+    
+     <script src="<?php echo base_url();?>js/jquery-3.2.1.min.js"></script>
+      <script src="<?php echo base_url();?>js/alertify.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
+   
+     <script type="text/javascript" src="<?php echo base_url();?>js/Ajax/url.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/Ajax/ProfileView.js?n=1"></script>
+<!-- <script type="text/javascript">
+$(document).ready(function()
+		{
+			
+			var base_url="<?php //echo base_url();?>";
+			
+			//alert("KK"+base_url);
+			
+			
+		});
+
+</script> -->
+
+
+  </head>
+  <body>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding outer-box">
+	<nav class="navbar navbar-default">
+	  <div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  		  <a class="navbar-brand" href="<?php echo base_url();?>">
+		  <img src="<?php echo base_url();?>/images/logo.png">
+		  ANVY BUSINESS</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		 <ul class="nav navbar-nav navbar-right">
+			<li><a href="<?php echo base_url();?>welcome/home"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+			<li class="dropdown active">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"> </i> Profile</a>
+			  <ul class="dropdown-menu">
+				<li><a href="<?php echo base_url();?>welcome/profile"><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
+				<li><a href="<?php echo base_url();?>welcome/changepassword"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Change Password</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-handshake-o" aria-hidden="true"></i> My Business</a>
+			  <ul class="dropdown-menu">
+				<li><a href="<?php echo base_url();?>welcome/teamView"><i class="fa fa-users" aria-hidden="true"></i> Team View</a></li>
+				<li><a href="<?php echo base_url();?>welcome/directMembers"><i class="fa fa-user" aria-hidden="true"></i> Direct Members</a></li>
+				<li><a href="<?php echo base_url();?>welcome/downlineList"><i class="fa fa-sitemap" aria-hidden="true"></i> Downline List</a></li>
+<li><a href="<?php echo base_url();?>welcome/upgradeuser"><i class="fa fa-sitemap" aria-hidden="true"></i> Upgrade</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-check-square-o " aria-hidden="true"></i> Accounts</a>
+			  <ul class="dropdown-menu">
+				<!--<li><a href="<?php echo base_url();?>welcome/ewallet"><i class="fa fa-credit-card" aria-hidden="true"></i> Ewallet</a></li>-->
+				<li><a href="<?php echo base_url();?>welcome/directSalesIncentive"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Direct Sales Incentive</a></li>
+				<li><a href="<?php echo base_url();?>welcome/teamSalesIncentive"><i class="fa fa-users" aria-hidden="true"></i> Team Sales Incentive</a></li>
+				<li><a href="<?php echo base_url();?>welcome/leadersSuccessIncentive"><i class="fa fa-user" aria-hidden="true"></i> Leaders Success Incentive</a></li>
+				<li><a href="<?php echo base_url();?>welcome/myIncome"><i class="fa fa-credit-card" aria-hidden="true"></i> My Income</a></li>
+			  </ul>
+			</li>
+			<li><a href="<?php echo base_url();?>welcome/support"><i class="fa  fa-question-circle" aria-hidden="true"></i> Support</a></li>
+			<li><a href="<?php echo base_url();?>welcome/businessTools"><i class="fa  fa-wrench" aria-hidden="true"></i> Business Tools</a></li>
+			<!--<li><a href="<?php echo base_url();?>welcome/activate"><i class="fa  fa-user-plus" aria-hidden="true"></i>  Activate User</a></li>-->
+			
+			<li><a href="<?php echo base_url();?>welcome/logout"><i class="fa  fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="col-xs-12 col-sm-12 main-body">
+    	<div class="container">
+			<div class="row">
+				<h2>MY PROFILE</h2>
+			</div>
+        <div class="col-xs-12 col-sm-12 forms">
+		<div class="form-horizontal ">
+			<div class="col-xs-12 col-sm-6 profile-left">
+			 <div class="form-group">
+				<label for="name" class="col-sm-4 control-label">Name<span style="color: red;font-size: 16px;">*</span></label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" disabled="disabled" id="fname">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="mobile" class="col-sm-4 control-label">Mobile no<span style="color: red;font-size: 16px;">*</span></label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" disabled="disabled" id="mobile">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="address" class="col-sm-4 control-label">Address</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="address">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="city" class="col-sm-4 control-label">City<span style="color: red;font-size: 16px;">*</span></label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="city">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="country" class="col-sm-4 control-label">Country<span style="color: red;font-size: 16px;">*</span></label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="country">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="state" class="col-sm-4 control-label">State<span style="color: red;font-size: 16px;">*</span></label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="state">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="pin" class="col-sm-4 control-label">PIN Code</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="apin">
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+				<label  class="col-sm-4 control-label" for="profile_photo">Photo</label>
+				<div class="col-sm-8">
+
+					<div id="photo" style="border: 0px;"><img src="<?php echo base_url()."/images/profile/".$src;?>" class="img-responsive"></div>
+					<input type="file" id="profile_photo" name="photo">
+				</div>
+			  </div>
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-6 profile-right">
+<div class="form-group">
+				<label for="email" class="col-sm-4 control-label">User Id<span style="color: red;font-size: 16px;">*</span></label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" disabled="disabled" id="u_referal">
+				</div>
+			  </div>
+			 <div class="form-group">
+				<label for="email" class="col-sm-4 control-label">Email Id</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="mail">
+				</div>
+			  </div>
+			 <div class="form-group">
+				<label for="pan" class="col-sm-4 control-label">PAN No.</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="pan">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="bank_name" class="col-sm-4 control-label">Bank Name</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="bank_name">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="branch" class="col-sm-4 control-label">Bank Branch</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="branch_name">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="payee_name" class="col-sm-4 control-label">Payee Name</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="payee_name">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="account_no" class="col-sm-4 control-label">A/C No</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="acnt_no">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<label for="ifsc" class="col-sm-4 control-label">IFSC Code</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="ifsc">
+				</div>
+			  </div>
+			</div>
+			<div class="col-xs-12 col-sm-12 text-center">
+              <button type="submit" class="btn btn-primary" id="submitt">Update</button>
+            </div>
+		</div>
+		</div>
+        </div>
+       
+    </div>
+    <div class="col-xs-12 col-sm-12 footer no-padding">
+    	<div class="container">
+       	 Copyright &copy; 2018 Anvy Business Services(OPC) Pvt Ltd. All Rights Reserved | Design by <a href="http://www.adhoctechnologies.org/" target="_blank">Adhoc Technologies Pvt Ltd.</a>
+        </div>
+    </div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   
+	<script src="<?php echo base_url();?>js/crs.js"></script>
+  </body>
+</html>
